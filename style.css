@@ -1,0 +1,572 @@
+/* Global reset to ensure no overflow */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in width/height calculations */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100vh; /* Ensures the body's height is constrained to the viewport */
+}
+
+section nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 10px #0b2d76;
+  background: #eff5f6;
+  position:fixed;
+  left: 0;
+  z-index: 50;
+  padding-left: 100px;
+  font-size: larger;
+}
+section nav .logo img{
+  width: 90px;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+section nav ul{
+  list-style: none;
+}
+
+section nav li{
+  display: inline-block;
+  padding: 0 10px;
+}
+
+section nav li a{
+  text-decoration: none;
+  color: black;
+}
+section nav li a:hover{
+  color:#0b2d76;
+}
+section nav .social_icon i{
+  margin: 0 5px;
+  font-size: 18px;
+}
+section nav .social_icon i:hover{
+  color: #0b2d76;
+  cursor: pointer;
+}
+
+
+.max-width{
+  margin: auto;
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+  text-align: center;
+}
+.about{
+  font-family: 'Poppins', sans-serif;
+  border: 10px;
+  padding: 20px;
+}
+.about .about-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+section .title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 100px;
+  height: 3px;
+  background: #007bff;
+  transform: translateX(-50%);
+}
+section .title::after{
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: rgb(9, 56, 90);
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.title{
+  padding-top: 50px;
+}
+
+.text{
+  font-size: larger;
+}
+
+#read{
+  border-radius: 10px;
+  background-color: #007bff;
+  color: #fff;
+} 
+
+/* service */
+.service{
+  background-color: gray;
+  margin: 10px;
+}
+
+.service-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.solution{
+  background-color: #cccaca;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 18rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-top: 60px;
+  margin: 40px;
+}
+
+.icon-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 15px;
+  margin-top: 20px;
+}
+
+
+.contain{
+  margin: 10px;
+}
+/* Testimonial */
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background: url(https://png.pngtree.com/thumb_back/fh260/background/20210224/pngtree-blue-abstract-background-business-image_564246.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+}
+
+.testimonials h2 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.testimonials p {
+  margin-bottom: 20px;
+}
+
+.slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  width: 100%; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+
+.testimonials-sections .card {
+  flex: 0 0 20%; 
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+
+.testimonials-sections .card {
+  flex: 0 0 32%; 
+  box-sizing: border-box;
+  padding: 20px;
+  background: white;
+  color: black;
+  margin: 0 10px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-sections .card h4 {
+  margin-top: 10px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #0b2d76;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: #007bff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 20px; 
+  box-sizing: border-box;
+  
+}
+
+.contact-info div {
+  text-align: center;
+}
+
+.icons {
+  font-size: 1.2em;
+}
+
+
+
+.last {
+  font-family: Arial, sans-serif;
+  margin: 50px 0px;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.last{
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+}
+
+.black-container {
+  background-color: #000000d3;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0;  
+}
+.column {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+}
+.column h3 {
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+.links ul li {
+  margin: 10px 0;
+}
+.links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.address p {
+  margin: 10px 0;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #005f7a;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.address-map-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+}
+.address {
+  flex: 1;
+  margin-right: 20px;
+}
+.map {
+  flex: 1;
+  height: 300px; 
+  border: 2px solid #555;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 0;  
+  position: relative;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+footer .social-icons {
+  margin-top: 10px;
+  color: #fff;
+}
+footer .social-icons a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+footer .social-icons a:hover {
+  color: #00aced;
+}
+footer .back-to-top {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .back-to-top a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+footer .back-to-top a:hover {
+  text-decoration: underline;
+}          
+
+
+/* Mobile (portrait) screens */
+@media (max-width: 480px) {
+  /* Navbar */
+  section nav {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      padding: 10px;
+  }
+
+  section nav ul {
+      display: none; /* Hide menu initially */
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+  }
+
+  section nav .menu-toggle {
+      display: block; /* Show the menu icon */
+      font-size: 30px;
+      cursor: pointer;
+  }
+
+  section nav ul.active {
+      display: flex;
+  }
+
+  section nav .logo img {
+      width: 60px; /* Adjust logo size */
+      max-width: 100%; /* Prevent image overflow */
+  }
+
+  section .title {
+      font-size: 24px; /* Adjust font size */
+  }
+
+  /* Service Cards should be stacked vertically */
+  .service .service-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%; /* Ensure service content takes the full screen width */
+  }
+
+  .service .service-content .card {
+      width: 100%; /* Cards take up full width */
+      max-width: 100%; /* Prevent overflow */
+      margin: 10px 0; /* Space between cards */
+  }
+
+  .max-width {
+      padding: 0 10px;
+      width: 100%; /* Ensure max-width fits the screen */
+  }
+
+  /* Banner visibility */
+  .banner {
+      width: 100%; /* Ensure banner takes full screen width */
+      height: 200px; /* Adjust banner size for mobile */
+      background-position: center;
+      background-size: cover;
+  }
+
+  .about .about-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Prevent horizontal scrolling */
+  .container, .content {
+      width: 100%; /* Ensure content fits within the screen width */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+}
+
+/* Small screens (portrait tablets and larger mobile phones) */
+@media (max-width: 768px) {
+  section nav {
+      font-size: medium;
+      padding: 10px 15px;
+  }
+
+  section nav .logo img {
+      width: 70px;
+      max-width: 100%; /* Prevent image overflow */
+  }
+
+  section .title {
+      font-size: 30px;
+  }
+
+  /* Service Cards should be stacked vertically */
+  .service .service-content .card {
+      width: 100%; /* Cards stacked vertically */
+      max-width: 100%; /* Prevent overflow */
+  }
+
+  .banner {
+      width: 100%; /* Banner should fit the screen */
+      height: 250px; /* Adjust height for smaller screens */
+  }
+
+  .about .about-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Prevent horizontal scrolling */
+  .container, .content {
+      width: 100%; /* Ensure full width */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  /* Ensure menu toggle is only visible on smaller screens */
+  section nav ul {
+      display: none; /* Hide menu by default */
+  }
+
+  section nav .menu-toggle {
+      display: block; /* Show the menu toggle icon */
+  }
+
+  section nav ul.active {
+      display: flex; /* Show menu when active */
+  }
+}
+
+/* Medium to larger screens */
+@media (min-width: 769px) {
+  section nav {
+      padding: 15px 40px;
+      justify-content: space-between;
+  }
+
+  section nav ul {
+      display: flex; /* Show menu on larger screens */
+      justify-content: flex-end;
+  }
+
+  section nav .menu-toggle {
+      display: none; /* Hide the menu toggle icon on larger screens */
+  }
+
+  .service .service-content {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .service .service-content .card {
+      width: 32%; /* Cards aligned horizontally */
+  }
+
+  .banner {
+      height: 300px; /* Adjust banner height for larger screens */
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+  .service .service-content .card {
+      width: 24%; /* Cards aligned horizontally */
+  }
+}
